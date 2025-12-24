@@ -1,65 +1,105 @@
-import Image from "next/image";
+import Hero from "@/components/Hero";
+import CodeList from "@/components/CodeList";
+import Sidebar from "@/components/Sidebar";
+import ContentSection from "@/components/ContentSection";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <>
+      <Hero />
+
+      <div className="container mx-auto px-4 pb-24">
+        <div className="flex flex-col lg:flex-row gap-12">
+          {/* Main Content */}
+          <div className="lg:w-2/3 space-y-12">
+            <CodeList />
+
+            <ContentSection id="guides" title="How to Redeem Codes">
+              <ol className="list-decimal pl-5 space-y-4 text-white/80">
+                <li>
+                  <strong className="text-white">Launch the Game:</strong> Open <a href="https://www.roblox.com/games/100744519298647/Anime-Final-Quest" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Anime Final Quest</a> in Roblox.
+                </li>
+                <li>
+                  <strong className="text-white">Find the Menu:</strong> Look for the <strong>Menu</strong> button or icon on the left side of your screen.
+                </li>
+                <li>
+                  <strong className="text-white">Open Settings:</strong> Click on the Settings (Gear icon) or Twitter Bird icon depending on the interface.
+                </li>
+                <li>
+                  <strong className="text-white">Enter Code:</strong> Copy a code from our list above and paste it into the text box.
+                </li>
+                <li>
+                  <strong className="text-white">Claim Rewards:</strong> Hit the Redeem button to instantly get your Spins, Cash, and Runes!
+                </li>
+              </ol>
+            </ContentSection>
+
+            <ContentSection id="tier-list" title="Weapon Tier List (Dec 2025)">
+              <div className="overflow-x-auto">
+                <table className="w-full text-left border-collapse">
+                  <thead>
+                    <tr className="border-b border-white/10">
+                      <th className="p-4 text-primary">Tier</th>
+                      <th className="p-4 text-white">Weapons</th>
+                      <th className="p-4 text-white/60">Notes</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-white/5">
+                    <tr className="bg-white/5">
+                      <td className="p-4 font-bold text-red-500">S+</td>
+                      <td className="p-4 font-bold">Escanor's Axe (Rhitta), Shadow's Dagger</td>
+                      <td className="p-4 text-sm text-white/50">New Update Weapons. Insane DPS.</td>
+                    </tr>
+                    <tr>
+                      <td className="p-4 font-bold text-orange-400">S</td>
+                      <td className="p-4">Dragon Slayer, Dark Repulser</td>
+                      <td className="p-4 text-sm text-white/50">Great for boss farming.</td>
+                    </tr>
+                    <tr className="bg-white/5">
+                      <td className="p-4 font-bold text-purple-400">A</td>
+                      <td className="p-4">Elucidator, Zangetsu</td>
+                      <td className="p-4 text-sm text-white/50">Solid starter legendaries.</td>
+                    </tr>
+                    <tr>
+                      <td className="p-4 font-bold text-blue-400">B</td>
+                      <td className="p-4">Standard Katanas, Scythe</td>
+                      <td className="p-4 text-sm text-white/50">Good for early game grinding.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </ContentSection>
+
+            <ContentSection id="faq" title="Frequently Asked Questions">
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-lg font-bold text-white mb-2">Why are my codes not working?</h3>
+                  <p className="text-white/70 text-sm leading-relaxed">
+                    Codes in Anime Final Quest can expire quickly. Make sure you are typing them exactly as shown (they are case-sensitive). If a code says "Expired" in our list, it is no longer valid.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold text-white mb-2">How do I get more spins?</h3>
+                  <p className="text-white/70 text-sm leading-relaxed">
+                    Besides using codes, you can earn spins by completing daily quests, defeating bosses, or staying in the AFK area for free rewards over time.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold text-white mb-2">When is the next update?</h3>
+                  <p className="text-white/70 text-sm leading-relaxed">
+                    The developers usually release updates every 2-3 weeks. Join the official Discord server for sneak peeks!
+                  </p>
+                </div>
+              </div>
+            </ContentSection>
+          </div>
+
+          {/* Sidebar */}
+          <div className="lg:w-1/3">
+            <Sidebar />
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      </div>
+    </>
   );
 }

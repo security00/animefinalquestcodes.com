@@ -27,9 +27,16 @@ export default function Footer() {
                     <div className="space-y-4">
                         <h4 className="font-semibold text-white/90">Legal</h4>
                         <ul className="space-y-2 text-sm text-white/60">
-                            <li><Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link></li>
-                            <li><Link href="#" className="hover:text-white transition-colors">Terms of Service</Link></li>
-                            <li><Link href="#" className="hover:text-white transition-colors">Contact Us</Link></li>
+                            <li><Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
+                            <li><Link href="/terms-of-service" className="hover:text-white transition-colors">Terms of Service</Link></li>
+                            <li>
+                                <a
+                                    href="mailto:support@animefinalquestcodes.com"
+                                    className="hover:text-white transition-colors"
+                                >
+                                    support@animefinalquestcodes.com
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>

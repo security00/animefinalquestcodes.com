@@ -11,6 +11,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
             changeFrequency: "daily",
             priority: 1,
         },
+        {
+            url: `${baseUrl}/privacy-policy`,
+            lastModified,
+            changeFrequency: "yearly",
+            priority: 0.2,
+        },
+        {
+            url: `${baseUrl}/terms-of-service`,
+            lastModified,
+            changeFrequency: "yearly",
+            priority: 0.2,
+        },
         // We can add other dynamic routes here in the future
     ];
 }

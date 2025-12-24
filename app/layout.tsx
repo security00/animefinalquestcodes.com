@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter, Outfit } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
+import MicrosoftClarity from "@/components/MicrosoftClarity";
 import "./globals.css";
 
 const inter = Inter({
@@ -15,12 +17,15 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Anime Final Quest Codes (December 2025) - Active Codes & Guide",
-  description: "Get the latest Anime Final Quest codes for free rewards. Complete guide, tier list, and tips for this popular Roblox anime RPG.",
+  title: "Anime Final Quest Codes (Dec 2025) – New Working Codes",
+  description: "One-click copy the latest Anime Final Quest codes for free spins, cash, and runes. Updated daily with active and expired list, redeem steps, and FAQs.",
   metadataBase: new URL("https://animefinalquestcodes.com"),
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "Anime Final Quest Codes - Daily Updated",
-    description: "Claim your free spins, gems, and boosts now!",
+    title: "Anime Final Quest Codes – New Working Codes",
+    description: "One-click copy working codes for free spins, cash, and runes. Updated daily.",
     type: "website",
   }
 };
@@ -35,6 +40,8 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${outfit.variable} antialiased min-h-screen flex flex-col bg-[#0f0f12] text-white`}
       >
+        <GoogleAnalytics />
+        <MicrosoftClarity />
         <Header />
         <main className="flex-grow pt-16">
           {children}

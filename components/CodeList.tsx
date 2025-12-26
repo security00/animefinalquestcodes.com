@@ -11,16 +11,22 @@ type Code = {
 };
 
 const ACTIVE_CODES: Code[] = [
-    { code: "SUPPORT", reward: "15 Lucky Weapon Spins & 10 Weapon Spins", isNew: true },
-    { code: "CHILDOFSUN", reward: "15 Lucky Weapon Spins & 10 Weapon Spins", isNew: true },
-    { code: "PATCHES", reward: "3 Runes & 15k Cash", isNew: true },
+    { code: "MERRYCHRISTMAS", reward: "25k Cash & 5 Weapon Spins", isNew: true },
+    { code: "SUPPORT", reward: "15 Lucky Weapon Spins & 10 Weapon Spins" },
+    { code: "CHILDOFSUN", reward: "15 Lucky Weapon Spins & 10 Weapon Spins" },
+    { code: "PATCHES", reward: "3 Runes & 15k Cash" },
 ];
 
 const EXPIRED_CODES = [
     "ESCANORSOON",
     "SHADOW",
     "BOSS",
-    "UPDATE1"
+    "UPDATE1",
+    "THXFOR1MVISIT",
+    "RELEASE2",
+    "AFQPEAK",
+    "AGRIS",
+    "RELEASE"
 ];
 
 export default function CodeList() {
